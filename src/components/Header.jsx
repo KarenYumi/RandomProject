@@ -11,7 +11,7 @@ export default function Header() {
         <Link>Contato</Link>
         <Link>Loja</Link>
       </div>
-      <div>
+      <div className='login'>
         <p>Entrar</p>
         <p>Conta</p>
       </div>
