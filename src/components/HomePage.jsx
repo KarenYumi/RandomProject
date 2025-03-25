@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+
+import imagem1 from '../assets/corredor.jpg';
+import imagem2 from '../assets/dancarina.jpg';
 import Header from "./Header";
 import Form from "./Form";
+import About from "./About";
+import Comodity from "./Comodity";
 
 export default function HomePage() {
   return (
@@ -8,43 +13,19 @@ export default function HomePage() {
       <Header />
       <div className='home'>
         <div className="center">
-          <h1>Treine no seu Tempo.</h1>
-          <Link>Faça parte da nossa academia</Link>
+          <div style={{ padding: '2rem' }}>
+            <h1>Treine no seu </h1>
+            <h1>Tempo.</h1>
+          </div>
+          <Link className='center-link'>Faça parte da nossa academia</Link>
         </div>
       </div>
-      <div className='about'>
-        <h2>SOMOS UMA ACADEMIA DE ALTA QUALIDADE, DEDICADA À SAÚDE E BEM-ESTAR ACESSÍVEIS.</h2>
-        <p>A Império é uma academia para você frequentar do seu jeito, e fazer o seu melhor. Ao associar-se, você terá acesso a uma programação digital e presencial na academia para ajudá-lo a atingir seus objetivos de condicionamento físico. Veja abaixo todos os serviços oferecidos pela academia.</p>
+      <About />
+      <div className='fotos-aleatorias'>
+        <img src={imagem1} id='corredor' />
+        <img src={imagem2} id='dancarina' />
       </div>
-      <div className='fotos-aleatorias'> {/*colocar duas fotos*/} </div>
-      <div className='servicos'>
-        <h2>COMODIDADES</h2>
-        <p>Na Império, sempre oferecemos novas comodidades para atender às necessidades dos nossos clientes. Você gostaria de adicionar algo à nossa lista? Envie uma sugestão.</p>
-        <div className='servicos-lista'>
-          <ul>
-            <li>Instalações modernas</li>
-            <li>•</li>
-            <li>Aulas premium</li>
-            <li>•</li>
-            <li>Personal trainers</li>
-            <li>•</li>
-            <li>Parede de escalada</li>
-            <li>•</li>
-            <li>Ringue de boxe</li>
-          </ul>
-          <ul>
-            <li>Sucos</li>
-            <li>•</li>
-            <li>Nutrição pessoal</li>
-            <li>•</li>
-            <li>Passes mensais para convidados</li>
-            <li>•</li>
-            <li>Quadras de basquete</li>
-            <li>•</li>
-            <li>Armários</li>
-          </ul>
-        </div>
-      </div>
+      <Comodity />
       <Form />
     </>
   )
