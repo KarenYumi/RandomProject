@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 
 import imagem1 from '../assets/corredor.jpg';
-import imagem2 from '../assets/dancarina.jpg';
+import imagem2 from '../assets/dancarina2.jpg';
 import Header from "./Header";
 import Form from "./Form";
 import About from "./About";
 import Comodity from "./Comodity";
+import Local from "./Local";
+import Footer from "../Footer";
 
 export default function HomePage() {
   return (
@@ -27,6 +29,24 @@ export default function HomePage() {
       </div>
       <Comodity />
       <Form />
+      <div className='frase'>
+        <div>
+          <h1>“A Império FOI FUNDAMENTAL PARA AJUDAR A MELHORAR MINHA RESISTÊNCIA PARA CORRER A MARATONA.”</h1>
+          <p>-Willian Guilherme</p>
+        </div>
+      </div>
+      <Local />
+      <div className='mini-form'>
+        <div>
+          <h1>FIQUE POR DENTRO</h1>
+          <p>Cadastre-se e seja o primeiro a saber sobre novas aulas, comodidades e mais. Respeitamos sua privacidade e nunca compartilharemos suas informações com fornecedores externos.</p>
+        </div>
+        <div className="form-mini">
+          <input type='text' placeholder='E-mail' />
+          <button>Cadastre-se</button>
+        </div>
+      </div>
+      <Footer />
     </>
   )
 }

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-
-import { CartIcon, FaceIcon, InstaIcon, YoutubeIcon } from "./Icons";
+import { CartIcon, FaceIcon, InstaIcon, YoutubeIcon, MenuIcon } from "./Icons";
 import DropMenu from "./DropMenu";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Controle do menu
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,18 +14,22 @@ export default function Header() {
       } else {
         setIsScrolled(false);
       }
-    }
+    };
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
-    }
+    };
+  }, []);
 
-  }, [])
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen); // Alterna o menu principal
+  };
+
   return (
     <header id="main-header" className={isScrolled ? 'scrolled' : ''}>
       <h1 id="title">Império</h1>
-      <nav className='menu'>
-      <DropMenu
+      <nav className={`menu ${isMenuOpen ? 'open' : ''}`}>
+        <DropMenu
           title="Sobre"
           options={[
             { name: "Instrutores", path: "/historia" },
@@ -37,6 +41,11 @@ export default function Header() {
         <Link className="menu-decoration">Contato</Link>
         <Link className="menu-decoration">Loja</Link>
       </nav>
+
+      <div className="menu-icon" onClick={toggleMenu}>
+        <MenuIcon />
+      </div>
+
       <div className='login'>
         <p>Entrar</p>
         <p>Conta</p>
@@ -51,5 +60,5 @@ export default function Header() {
         <p>0</p>
       </div>
     </header>
-  )
+  );
 }
