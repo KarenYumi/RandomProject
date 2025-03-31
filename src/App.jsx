@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import HomePage from './components/HomePage';
 import Agenda from './components/Agenda';
+import Contact from './components/Contact'
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: '/agenda',
     element: <Agenda />,
+  },
+  {
+    path: '/contact',
+    element: <Contact/>
   }
 ]);
 

@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <header id="main-header" className={isScrolled ? 'scrolled' : ''}>
-      <h1 id="title">Império</h1>
+      <Link id="title" to='/'>Império</Link>
       <nav className={`menu ${isMenuOpen ? 'open' : ''}`}>
         <DropMenu
           title="Sobre"
@@ -38,11 +38,11 @@ export default function Header() {
           ]}
         />
         <Link to='/agenda' className="menu-decoration">Agenda</Link>
-        <Link className="menu-decoration">Contato</Link>
+        <Link to='/contact' className="menu-decoration">Contato</Link>
         <Link className="menu-decoration">Loja</Link>
       </nav>
 
-      <div className="menu-icon" onClick={toggleMenu}>
+      <div className="menu-icon" onClick={toggleMenu}> {/* CONTINUAR ISSO MAIS TARDE */}
         <MenuIcon />
       </div>
 
