@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import imagem1 from '../assets/corredor.jpg';
 import imagem2 from '../assets/dancarina2.jpg';
@@ -11,16 +12,26 @@ import Footer from "./Footer";
 import MiniForm from "./MiniForm";
 
 export default function HomePage() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible(true);
+    }, 100); // Pequeno delay para suavizar
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <>
       <Header />
       <div className='home'>
         <div className="center">
           <div style={{ padding: '2rem' }}>
-            <h1>Treine no seu </h1>
-            <h1>Tempo.</h1>
+            <h1 className={`fade-in ${isVisible ? "visible" : ""}`}>Treine no seu </h1>
+            <h1 className={`fade-in ${isVisible ? "visible" : ""}`}>Tempo.</h1>
           </div>
-          <Link className='center-link'>Faça parte da nossa academia</Link>
+          <Link to="/sign-up" className={`center-link fade-in ${isVisible ? "visible" : ""}`}>Faça parte da nossa academia</Link>
         </div>
       </div>
       <About />

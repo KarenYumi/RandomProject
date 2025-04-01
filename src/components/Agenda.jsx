@@ -1,17 +1,28 @@
+import { useState, useEffect } from "react";
+
 import Header from "./Header";
 import Footer from "./Footer";
 import styles from './Agenda.module.css';
 import MiniForm from "./MiniForm";
 
 export default function Agenda() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible(true);
+    }, 100); // Pequeno delay para suavizar
+
+    return () => clearTimeout(timeout);
+  }, []);
   return (
     <>
       <Header />
       <div className={styles.header}></div>
-      <div className={styles.agenda}>
+      <div className={`${styles.agenda} fade-in ${isVisible ? "visible" : ""}`}>
         <h1>Segunda-Feira</h1>
         <div className={styles.horario}>
-          <div >
+          <div>
             <h2>Boxe 08h-09h</h2>
             <p>Localização: Pinheiros</p>
             <p>Instrutor: Ana Carolina</p>
