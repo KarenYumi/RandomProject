@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../../shared/Header";
+import Footer from "../../shared/Footer";
 import styles from './Agenda.module.css';
-import MiniForm from "./MiniForm";
+import MiniForm from "../../shared/MiniForm";
 
 export default function Agenda() {
   const [isVisible, setIsVisible] = useState(false);

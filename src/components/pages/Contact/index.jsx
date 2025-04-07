@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-import Footer from "./Footer";
-import Header from "./Header";
-import MiniForm from "./MiniForm";
+import Footer from "../../shared/Footer";
+import Header from "../../shared/Header";
+import MiniForm from "../../shared/MiniForm";
 
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false);

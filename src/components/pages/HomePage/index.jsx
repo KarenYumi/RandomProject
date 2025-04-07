@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import imagem1 from '../assets/corredor.jpg';
-import imagem2 from '../assets/dancarina2.jpg';
-import Header from "./Header";
-import Form from "./Form";
-import About from "./About";
-import Comodity from "./Comodity";
-import Local from "./Local";
-import Footer from "./Footer";
-import MiniForm from "./MiniForm";
+import imagem1 from '../../../assets/corredor.jpg';
+import imagem2 from '../../../assets/dancarina2.jpg';
+import Header from "../../shared/Header";
+import Form from "../../Form";
+import About from "../../About";
+import Comodity from "../../Comodity";
+import Local from "../../Local";
+import Footer from "../../shared/Footer";
+import MiniForm from "../../shared/MiniForm";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);

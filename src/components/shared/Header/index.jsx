@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { CartIcon, FaceIcon, InstaIcon, YoutubeIcon, MenuIcon } from "./Icons";
-import DropMenu from "./DropMenu";
+import { CartIcon, FaceIcon, InstaIcon, YoutubeIcon, MenuIcon } from "../Icons";
+import DropMenu from "../../DropMenu";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
