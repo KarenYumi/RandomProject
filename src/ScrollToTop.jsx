@@ -1,16 +1,16 @@
 import { useEffect } from "react";
-import { useNavigation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-const ScrollToTop = () => {
-  const navigation = useNavigation(); //Monitora mudanças de rota
+export default function ScrollToTop() {
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    if (navigation.state === "idle") {
-      window.scrollTo(0, 0); // Rola para o topo quando a navegação está completa
-    }
-  }, [navigation.state]);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth" // You can change to "auto" for instant scrolling
+    });
+  }, [pathname]); 
 
   return null;
-};
-
-export default ScrollToTop;
+}
