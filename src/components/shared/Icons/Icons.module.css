@@ -1,0 +1,25 @@
+.faceIcon {
+  height: 1.6rem;
+  fill: #FFFFFF;
+  color: #ffffff00;
+  padding-right: 4rem;
+}
+
+.youtubeIcon {
+  height: 1.6rem;
+  fill: #FFFFFF;
+  mix-blend-mode: normal;
+  padding: 0 0.6rem 0 0.6rem;
+}
+
+.instaIcon {
+  height: 1.6rem;
+  fill: #FFFFFF;
+  mix-blend-mode: normal;
+  padding-left: 4rem;
+}
+
+.cartIcon {
+  height: 1.6rem;
+  color: #FFFFFF;
+}

@@ -9,68 +9,9 @@ body {
   min-width: 800px;
 }
 
-@media (max-width: 800px) {
-
-  html,
-  body {
-    min-width: 320px;
-  }
-}
-
-@media (max-width: 1070px) {
-
-  #main-header {
-    display: flex;
-    height: 6rem;
-    align-items: center;
-    padding: 0 2rem;
-    top: 0;
-    left: 0;
-    right: 0;
-    transition: 0.4s ease-in-out;
-    flex-direction: column;
-  }
-
-  .social-icons {
-    visibility: hidden; /* Esconde os ícones sociais em telas pequenas */
-  }
-
-  .menu {
-    display: none; /* Esconde o menu por padrão */
-    width: 100%;
-    flex-direction: column; /* Coloca os itens do menu em coluna */
-    align-items: center;/* Define a cor de fundo do menu */
-  }
-
-  .login{
-    visibility: hidden;
-  }
-
-  .cart{
-    visibility: hidden;
-  }
-  .menu{
-    visibility: hidden;
-  }
-  .menu.open {
-    display: flex; /* Exibe o menu quando ele estiver aberto */
-  }
-
-  .menu-icon {
-    display: block;
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    fill: #ffffff;
-    height: 1.6rem;
-    top: 30px;
-    right: 50px;
-  }
-
-}
-
-.menu-icon {
-  visibility: hidden;
+.menuDecoration {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 .fade-in {
@@ -85,89 +26,6 @@ body {
   transform: translateY(0);
 }
 
-#main-header {
-  display: flex;
-  height: 6rem;
-  align-items: center;
-  padding: 0 2rem;
-  z-index: 2;
-  position: absolute;
-  width: 97%;
-  top: 0;
-  left: 0;
-  right: 0;
-  position: fixed;
-  transition: background-color 0.8s ease-in-out;
-}
-
-#main-header.scrolled {
-  background-color: black;
-}
-
-#main-header #title {
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: -0.25rem;
-  font-size: 2.5rem;
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
-.menu {
-  display: flex;
-  gap: 2rem;
-  flex-grow: 1;
-  justify-content: center;
-  margin-left: 9rem;
-  color: #FFFFFF;
-}
-
-.menu-decoration {
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
-.login p {
-  color: #FFFFFF;
-}
-
-.face-icon {
-  height: 1.6rem;
-  fill: #FFFFFF;
-  color: #ffffff00;
-  padding-right: 4rem;
-}
-
-.youtube-icon {
-  height: 1.6rem;
-  fill: #FFFFFF;
-  mix-blend-mode: normal;
-  padding: 0 0.6rem 0 0.6rem;
-}
-
-.insta-icon {
-  height: 1.6rem;
-  fill: #FFFFFF;
-  mix-blend-mode: normal;
-  padding-left: 4rem;
-}
-
-.cart {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  margin-left: auto;
-  padding-right: 2rem;
-}
-
-.cart-icon {
-  height: 1.6rem;
-  color: #FFFFFF;
-}
-
-.cart p {
-  color: #FFFFFF;
-}
 
 .home {
   top: 0;

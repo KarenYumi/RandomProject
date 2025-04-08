@@ -1,0 +1,162 @@
+#mainHeader {
+  display: flex;
+  height: 6rem;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 2;
+  position: fixed; 
+  width: 97%;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: background-color 0.8s ease-in-out;
+  background-color: transparent;
+  color: #FFFFFF;
+}
+
+#mainHeader.scrolled {
+  background-color: black !important;
+  background-image: none !important;
+  color: #FFFFFF !important;
+}
+
+/* Estilos específicos para cada página */
+#mainHeader.headerHome {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+#mainHeader.headerAgenda {
+  background-color: #ffffff;
+}
+
+#mainHeader.headerContato {
+  background-image: linear-gradient(125deg, #ff7e5f, #ffb176, #92abb1);
+}
+
+#mainHeader.headerInstrutores {
+  background-color: #ffffff;
+}
+
+/* Manter o header de instrutores sempre branco */
+#mainHeader.headerInstrutores.scrolled {
+  background-color: #ffffff !important;
+}
+
+/* Estilos base para o título */
+#mainHeader #title {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: -0.25rem;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+/* Estilos do menu */
+.menu {
+  display: flex;
+  gap: 2rem;
+  flex-grow: 1;
+  justify-content: center;
+  margin-left: 9rem;
+  color: #FFFFFF;
+}
+
+.menuDecoration {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.login p {
+  color: #FFFFFF;
+}
+
+.cart {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-left: 10rem;
+  padding-right: 2rem;
+}
+
+.cart p {
+  color: #FFFFFF;
+}
+
+/* Cores para a página de Instrutores (sempre preto) */
+#mainHeader.headerInstrutores #title,
+.headerInstrutores .menuDecoration,
+.headerInstrutores .menu,
+.headerInstrutores .login p,
+.headerInstrutores .cart p,
+.headerInstrutores a,
+.headerInstrutores p {
+  color: #000000 !important;
+}
+
+/* Aplicar cor preta a todos os SVGs na página de instrutores */
+.headerInstrutores svg,
+.headerInstrutores svg path,
+.headerInstrutores .cart-icon,
+.headerInstrutores .menu-icon {
+  stroke: #000000 !important;
+  color: #000000 !important;
+}
+
+/* Manter cores pretas mesmo quando rolado na página de instrutores */
+#mainHeader.headerInstrutores.scrolled #title,
+#mainHeader.headerInstrutores.scrolled .menuDecoration,
+#mainHeader.headerInstrutores.scrolled .menu,
+#mainHeader.headerInstrutores.scrolled .login p,
+#mainHeader.headerInstrutores.scrolled .cart p,
+#mainHeader.headerInstrutores.scrolled a,
+#mainHeader.headerInstrutores.scrolled p {
+  color: #000000 !important;
+}
+
+#mainHeader.headerInstrutores.scrolled svg,
+#mainHeader.headerInstrutores.scrolled svg path,
+#mainHeader.headerInstrutores.scrolled .cart-icon,
+#mainHeader.headerInstrutores.scrolled .menu-icon {
+  stroke: #000000 !important;
+  color: #000000 !important;
+}
+
+/* Cores para a página Agenda (texto e ícones pretos) */
+#mainHeader.headerAgenda #title,
+.headerAgenda .menuDecoration,
+.headerAgenda .menu,
+.headerAgenda .login p,
+.headerAgenda .cart p,
+.headerAgenda a,
+.headerAgenda p {
+  color: #000000 !important;
+}
+
+.headerAgenda svg,
+.headerAgenda svg path,
+.headerAgenda .cart-icon,
+.headerAgenda .menu-icon {
+  stroke: #000000 !important;
+  color: #000000 !important;
+}
+
+/* Cores padrão para textos e ícones quando rolado (exceto instrutores) */
+#mainHeader.scrolled #title,
+#mainHeader.scrolled .menuDecoration,
+#mainHeader.scrolled .menu,
+#mainHeader.scrolled .login p,
+#mainHeader.scrolled .cart p,
+#mainHeader.scrolled a,
+#mainHeader.scrolled p {
+  color: #FFFFFF !important;
+}
+
+#mainHeader.scrolled svg,
+#mainHeader.scrolled svg path,
+#mainHeader.scrolled .cart-icon,
+#mainHeader.scrolled .menu-icon {
+  stroke: #FFFFFF !important;
+  color: #FFFFFF !important;
+}
