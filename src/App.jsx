@@ -12,6 +12,7 @@ import HomePage from "./components/pages/HomePage";
 import Agenda from "./components/pages/Agenda";
 import Contact from "./components/pages/Contact";
 import ScrollToTop from "./ScrollToTop"; // Import the custom component
+import Instrutores from "./components/pages/Instrutores";
 
 const queryClient = new QueryClient();
 
@@ -31,7 +32,12 @@ const router = createBrowserRouter(
     <Route element={<Layout />}>
       <Route path="/" element={<HomePage />} />
       <Route path="/agenda" element={<Agenda />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route path="/contato" element={<Contact />} />
+      <Route path="/sobre" >
+        <Route path="instrutores" element={<Instrutores/>} />
+        <Route path="aulas" element={<h1>Missão e Valores</h1>} />
+        <Route path="preço" element={<h1>Equipe</h1>} />
+      </Route>
     </Route>
   )
 );
