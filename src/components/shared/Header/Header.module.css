@@ -85,7 +85,7 @@
 }
 
 /* Cores para a página de Instrutores (sempre preto) */
-#mainHeader.headerInstrutores #title,
+/* #mainHeader.headerInstrutores #title,
 .headerInstrutores .menuDecoration,
 .headerInstrutores .menu,
 .headerInstrutores .login p,
@@ -93,19 +93,19 @@
 .headerInstrutores a,
 .headerInstrutores p {
   color: #000000 !important;
-}
+} */
 
 /* Aplicar cor preta a todos os SVGs na página de instrutores */
-.headerInstrutores svg,
+/* .headerInstrutores svg,
 .headerInstrutores svg path,
 .headerInstrutores .cart-icon,
 .headerInstrutores .menu-icon {
   stroke: #000000 !important;
   color: #000000 !important;
-}
+} */
 
 /* Manter cores pretas mesmo quando rolado na página de instrutores */
-#mainHeader.headerInstrutores.scrolled #title,
+/* #mainHeader.headerInstrutores.scrolled #title,
 #mainHeader.headerInstrutores.scrolled .menuDecoration,
 #mainHeader.headerInstrutores.scrolled .menu,
 #mainHeader.headerInstrutores.scrolled .login p,
@@ -113,15 +113,15 @@
 #mainHeader.headerInstrutores.scrolled a,
 #mainHeader.headerInstrutores.scrolled p {
   color: #000000 !important;
-}
-
+} */
+/* 
 #mainHeader.headerInstrutores.scrolled svg,
 #mainHeader.headerInstrutores.scrolled svg path,
 #mainHeader.headerInstrutores.scrolled .cart-icon,
 #mainHeader.headerInstrutores.scrolled .menu-icon {
   stroke: #000000 !important;
   color: #000000 !important;
-}
+} */
 
 /* Cores para a página Agenda (texto e ícones pretos) */
 #mainHeader.headerAgenda #title,

@@ -31,7 +31,7 @@ export default function Header() {
     if (location.pathname === '/') return style.headerHome;
     if (location.pathname === '/agenda') return style.headerAgenda;
     if (location.pathname === '/contato') return style.headerContato;
-    if (location.pathname.includes('/instrutores')) return style.headerInstrutores;
+    if (location.pathname.includes('/instrutores')) return style.headerAgenda;
     return '';
   };
 

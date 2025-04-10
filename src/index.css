@@ -340,9 +340,16 @@ body {
   max-width: 400px;
 }
 
+/* Agora temos um contêiner para o formulário que inclui espaço para as mensagens */
+.form-container {
+  position: relative;
+  margin-top: 20px; /* Espaço para a mensagem de erro aparecer acima */
+}
+
 .form-mini {
   display: flex;
   gap: 1rem;
+  position: relative; /* Isso é importante para o posicionamento absoluto das mensagens */
 }
 
 .form-mini input {
@@ -358,8 +365,46 @@ body {
   border-radius: 50px;
   cursor: pointer;
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px; /* Largura mínima para evitar que mude de tamanho */
 }
 
+.form-mini input.input-error {
+  border-color: red;
+}
+
+/* Posicionamento absoluto para as mensagens */
+.message-container {
+  position: absolute;
+  top: -30px; /* Posiciona acima do formulário */
+  left: 0;
+  width: 100%;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.success-message {
+  color: #4CAF50;
+  font-size: 14px;
+}
+
+.form-mini button:disabled {
+  background-color: rgba(204, 204, 204, 0.3);
+  cursor: not-allowed;
+  border-color: #cccccc;
+}
+
+/* Adicionar estilo para o spinner e texto de carregamento */
+.loading-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .footer {
   height: 310px;
   background-color: #000000;
