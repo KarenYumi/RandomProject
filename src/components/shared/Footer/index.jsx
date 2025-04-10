@@ -1,6 +1,8 @@
+import { FaceIcon, InstaIcon, YoutubeIcon } from "../Icons";
+
 export default function Footer() {
   return (
-    <footer style={{backgroundColor: '#000000' }}>
+    <footer style={{ backgroundColor: '#000000' }}>
       <div style={{
         borderTop: '2px solid #ffff', margin: '0 4rem'
       }}></div>
@@ -20,9 +22,17 @@ export default function Footer() {
             <p>11 22232-2222</p>
           </div>
         </div>
-        <div >
-          <h1>Império</h1>
+        <div>
+          <div >
+            <h1>Império</h1>
+          </div>
+          <div>
+            <InstaIcon />
+            <YoutubeIcon />
+            <FaceIcon />
+          </div>
         </div>
+
       </div>
     </footer>
   )

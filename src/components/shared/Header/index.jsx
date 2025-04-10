@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation  } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { CartIcon, FaceIcon, InstaIcon, YoutubeIcon, MenuIcon } from "../Icons";
+import { CartIcon, MenuIcon } from "../Icons";
 import DropMenu from "../../DropMenu";
+import style from "./Header.module.css";
 
 export default function Header() {
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Controle do menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,37 +27,40 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen); // Alterna o menu principal
   };
 
+  const getHeaderClass = () => {
+    if (location.pathname === '/') return style.headerHome;
+    if (location.pathname === '/agenda') return style.headerAgenda;
+    if (location.pathname === '/contato') return style.headerContato;
+    if (location.pathname.includes('/instrutores')) return style.headerInstrutores;
+    return '';
+  };
+
   return (
-    <header id="main-header" className={isScrolled ? 'scrolled' : ''}>
-      <Link id="title" to='/'>Império</Link>
-      <nav className={`menu ${isMenuOpen ? 'open' : ''}`}>
+    <header id={style.mainHeader} className={`${isScrolled ? style.scrolled : ''} ${getHeaderClass()}`}>
+      <Link id={style.title} to='/'>Império</Link>
+      <nav className={`${style.menu} ${isMenuOpen ? 'open' : ''}`}>
         <DropMenu
           title="Sobre"
           options={[
-            { name: "Instrutores", path: "/historia" },
-            { name: "Aulas", path: "/missao-valores" },
-            { name: "Preço", path: "/equipe" },
+            { name: "Instrutores", path: "/sobre/instrutores" },
+            { name: "Aulas", path: "/sobre/aulas" },
+            { name: "Preço", path: "/sobre/preço" },
           ]}
         />
-        <Link to='/agenda' className="menu-decoration">Agenda</Link>
-        <Link to='/contact' className="menu-decoration">Contato</Link>
-        <Link className="menu-decoration">Loja</Link>
+        <Link to='/agenda' className={style.menuDecoration}>Agenda</Link>
+        <Link to='/contato' className={style.menuDecoration}>Contato</Link>
+        <Link className={style.menuDecoration}>Loja</Link>
       </nav>
 
-      <div className="menu-icon" onClick={toggleMenu}> {/* CONTINUAR ISSO MAIS TARDE */}
+      <div className={style.menuIcon} onClick={toggleMenu}> {/* CONTINUAR ISSO MAIS TARDE */}
         <MenuIcon />
       </div>
-
-      <div className='login'>
+      <div>
         <p>Entrar</p>
         <p>Conta</p>
       </div>
-      <div className="social-icons">
-        <InstaIcon />
-        <YoutubeIcon />
-        <FaceIcon />
-      </div>
-      <div className='cart'>
+      
+      <div className={style.cart}>
         <CartIcon />
         <p>0</p>
       </div>

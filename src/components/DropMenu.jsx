@@ -22,7 +22,7 @@ export default function DropMenu({ title, options }) {
   }, [])
 
   const handleMouseLeave = () => {
-    setTimer(setTimeout(() => setIsOpen(false), 50));
+    setTimer(setTimeout(() => setIsOpen(false), 500));
   };
 
   const handleMouseEnter = () => {
